@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="in" dir="ltr">
+     <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+          <meta name="description" content="">
+          <meta name="keywords" content="">
+          <link rel="stylesheet" href="template/css/normalize.css?v=3.7.5" type="text/css">
+          <link rel="stylesheet" href="template/css/style.css?v=3.7.5" type="text/css">
+          <link rel="stylesheet" href="template/css/mobile.css?v=3.7.5" type="text/css">
+          <title>Skrip online untuk permainan Cannon</title>
+          <style>
+               body {
+                    background: #6A8759 url(images/bg.jpg)
+               }
+          </style>
+          <style>
+               .sidebar {
+                    order: 2
+               }
+          </style>
+          <meta property="og:type" content="article">
+          <meta property="og:title" content="Skrip online untuk permainan PiB">
+          <meta property="og:description" content="">
+          <meta property="og:image" content="images/%D0%94%D0%A9%D0%9F%D0%A9%D0%A4.png">
+          <meta property="og:image:type" content="image/png">
+          <style>
+               .avatar-img {
+                    border: 2px solid #e04265 !important
+               }
+          </style>
+     </head>
+     <div class="layout" id="landing">
+          <div class="maincol-inner">
+               <center>
+                    <h1>Senjata dan Barel (Permainan Emas)</h1>
+               </center>
+               <link rel="stylesheet" href="css/431/bootstrap.min.css">
+               <link rel="stylesheet" href="css/font-awesome.min.css">
+               <link rel="icon" href="https://github.com/RofiqZaen/Gambar/blob/master/icon.png">
+               <script src="js/jquery.min.js"></script>
+               <script src="js/crypto-js-master/core.min.js"></script>
+               <script src="js/crypto-js-master/md5.min.js"></script>
+               <script src="js/crypto-js-master/sha256.min.js"></script>
+               <script src="js/crypto-js-master/enc-base64.min.js"></script>
+               <link rel="stylesheet" href="css/sweetalert2.min.css">
+               <script src="js/sweetalert2.min.js"></script>
+               <script src="js/my_offcanvas.min.js"></script>
+               <script src="js/galaxy7.js?v=12"></script>
+               <script src="js/bot/pibb.js"></script>
+               <style>
+                    button:focus {
+                         outline: 0 !important
+                    }
+               </style>
+               <body>
+                    <div></div>
+                    <div class="form-row">
+                         <div class="col-md-8">
+                              <div id="box">
+                                   <div class="chat mt-3 mb-2">Catatan:</div>
+                                   <style>
+                                        #box {
+                                             border: 1px solid #ddd;
+                                             padding: 0 20px;
+                                             overflow: auto;
+                                             height: 500px;
+                                             background-color: #fff
+                                        }
+                                   </style>
+                                   <style>
+                                        .server {
+                                             overflow-y: auto;
+                                             max-height: 200px
+                                        }
+
+                                        .chat {
+                                             max-height: 340px
+                                        }
+                                   </style>
+                                   <script>
+                                        var timer, isPaused = !1;
+                                        $(window).on("wheel", function() {
+                                             isPaused = !0, clearTimeout(timer), timer = window.setTimeout(function() {
+                                                  isPaused = !1
+                                             }, 1e3)
+                                        }), window.setInterval(function() {
+                                             isPaused || $("#box").scrollTop($("#box")[0].scrollHeight)
+                                        }, 500)
+                                   </script>
+                              </div>
+                         </div>
+                         <div class="col-md-4">
+                              <div class="mt-2 mb-2">
+                                   <div class="form-group">
+                                        <style>
+                                             mark {
+                                                  background: #ffec82;
+                                                  padding: 0 3px;
+                                                  border: 1px dashed #333
+                                             }
+                                        </style>
+                                        <label for="recover">
+                                             <mark>Kode pemulihan*:</mark>
+                                        </label>
+                                        <input type="text" class="form-control form-control-sm" id="recover" placeholder="Kode pemulihan" value="" maxlength="10" style="font-size:16px">
+                                   </div>
+                                   <script>
+                                        window.addEventListener('unload', () => localStorage.setItem('vals', [...document.querySelectorAll('input[type="text"]')].map((e, i) => e.value)));
+                                        let vals = localStorage.getItem('vals') ? localStorage.getItem('vals').split`,` : '';
+                                        let inp = document.querySelectorAll('input[type="text"]');
+                                        for (let i = 0; i < inp.length; i++) vals[i] ? inp[i].value = vals[i] : '';
+                                   </script>
+                                   <div class="form-group d-none">
+                                        <label for="secrets">Kunci*:</label>
+                                        <input type="text" class="form-control form-control-sm" id="secrets" placeholder="Kunci" value="" style="font-size:16px">
+                                   </div>
+                                   <style>
+                                        .container-buttons {
+                                             display: flex;
+                                             justify-content: space-around
+                                        }
+                                   </style>
+                                   <div class="container-buttons">
+                                        <input type="submit" class="btn btn-sm btn-block btn-info connect" style="width:130px" value="Sambungkan.">
+                                        <form action="index1.html" method="GET">
+                                             <input type="submit" class="btn btn-sm btn-block btn-info disconnect" style="width:130px" value="Keluar.">
+                                        </form>
+                                   </div>
+                                   <div class="custom-control custom-switch lb-opt">
+                                        <div class="custom-control custom-switch fArmor">
+                                             <input type="checkbox" class="custom-control-input" id="fArmor" checked="checked">
+                                             <label class="custom-control-label" for="fArmor">
+                                                  <mark>Selesaikan reservasi Anda</mark>
+                                             </label>
+                                        </div>
+                                        <div class="custom-control custom-switch fSera">
+                                             <input type="checkbox" class="custom-control-input" id="fSera" checked="checked">
+                                             <label class="custom-control-label" for="fSera">
+                                                  <mark>Tembak belerang di tong ke-3</mark>
+                                             </label>
+                                        </div>
+                                        <div class="custom-control custom-switch fSera2">
+                                             <input type="checkbox" class="custom-control-input" id="fSera2">
+                                             <label class="custom-control-label" for="fSera2">
+                                                  <mark>Tembak belerang di tong ke-2</mark>
+                                             </label>
+                                        </div>
+                                        <div class="custom-control custom-switch fbronza">
+                                             <input type="checkbox" class="custom-control-input" id="fbronza" checked="checked">
+                                             <label class="custom-control-label" for="fbronza">
+                                                  <mark>Perunggu</mark>
+                                             </label>
+                                        </div>
+                                        <div class="custom-control custom-switch fgold">
+                                             <input type="checkbox" class="custom-control-input" id="fgold" checked="checked">
+                                             <label class="custom-control-label" for="fgold">
+                                                  <mark>Inti emas</mark>
+                                             </label>
+                                        </div>
+                                        <div class="custom-control custom-switch fml">
+                                             <input type="checkbox" class="custom-control-input" id="fml" checked="checked">
+                                             <label class="custom-control-label" for="fml">
+                                                  <mark>Emas kecil</mark>
+                                             </label>
+                                        </div>
+                                        <div class="custom-control custom-switch green">
+                                             <input type="checkbox" class="custom-control-input" id="green">
+                                             <label class="custom-control-label" for="green">
+                                                  <mark>Dengan green light</mark>
+                                             </label>
+                                        </div>
+                                        <div class="mt-2 mb-2">
+                                             <div class="form-group">
+                                                  <label for="join"></label>
+                                                  <select class="form-control form-control-sm" id="join" style="font-size:16px">
+                                                       <option value="Cannon*1">Cannon*1</option>
+                                                       <option value="Cannon*2">Cannon*2</option>
+                                                       <option value="Cannon*3">Cannon*3</option>
+                                                       <option value="Cannon*4">Cannon*4</option>
+                                                       <option value="Cannon*5">Cannon*5</option>
+                                                       <option value="Cannon*6">Cannon*6</option>
+                                                       <option value="Cannon*7">Cannon*7</option>
+                                                       <option value="Cannon*8">Cannon*8</option>
+                                                       <option value="Cannon*9">Cannon*9</option>
+                                                       <option value="Cannon*10">Cannon*10</option>
+                                                       <option value="Cannon*11">Cannon*11</option>
+                                                       <option value="Cannon*12">Cannon*12</option>
+                                                       <option value="Cannon*13">Cannon*13</option>
+                                                       <option value="Cannon*14">Cannon*14</option>
+                                                       <option value="Cannon*15">Cannon*15</option>
+                                                       <option value="Cannon*16">Cannon*16</option>
+                                                       <option value="Cannon*17">Cannon*17</option>
+                                                       <option value="Cannon*18">Cannon*18</option>
+                                                       <option value="Cannon*19">Cannon*19</option>
+                                                       <option value="Cannon*20">Cannon*20</option>
+                                                  </select>
+                                             </div>
+                                             <input type="submit" class="btn btn-sm btn-block btn-info join" value="Terbang">
+                                        </div>
+                                   </div>
+                                   <label for="recover">
+                                        <mark>Pesan*:</mark>
+                                   </label>
+                                   <input type="text" class="form-control form-control-sm" id="msgg" placeholder="Pesan" value="" maxlength="200" style="font-size:16px">
+                              </div>
+                              <input type="submit" class="btn btn-sm btn-block btn-info privmsg" value="Menulis untuk mengobrol">
+                         </div>
+                    </div>
+          </div>
+          <script>
+               let main_join = "";
+
+               function connect(recover) {
+                    $(".chat").html("");
+                    GALAXY.recoverUser(recover);
+               }
+               $(document).on("click", ".connect", function() {
+                    main_join = $("select").val();
+                    connect($("#recover").val());
+               });
+               $(document).on("click", ".join", function() {
+                    GALAXY.command("JOIN " + $("select").val());
+               })
+               $(document).on("click", ".privmsg", function() {
+                    GALAXY.command("PRIVMSG 0 0 : " + $("#msgg").val());
+               })
+          </script>
+     </div>
+     <script src="pooper2.js"></script>
+     <script src="boot2.js"></script>
+     <script>
+          let secret = document.querySelector("#secrets");
+          let cl = document.querySelector(".connect");
+          if (cl) cl.onclick = function() {
+               if (secret)
+                    if (secret.value.trim() === "" || secret.value.trim() === "galaxy") {
+                         setTimeout(function() {
+                              //window.open("https://www.google.com/", "_blank")
+                         }, 3000);
+                    }
+          }
+     </script>
+</html>
