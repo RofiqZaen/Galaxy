@@ -1,10 +1,7 @@
 (function () {
     console.log("🔥 Remote script loaded");
 
-    if (!location.hostname.includes("mobstudio.ru")) {
-        console.log("❌ Disabled on this domain");
-        return;
-    }
+    if (!window.__ALLOW_ERUDA__) return;
 
     if (!window.eruda) {
         var s = document.createElement("script");
