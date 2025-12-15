@@ -8,16 +8,6 @@ if (!location.hostname.includes("mobstudio.ru")) {
     return;
 }
 
-// // ===== ERUDA =====
-// if (!window.eruda) {
-// var s = document.createElement("script");
-// s.src = "//cdn.jsdelivr.net/npm/eruda";
-// document.body.appendChild(s);
-// s.onload = function() {
-// eruda.init();
-// };
-// }
-
 try {
 
     const O = WebSocket;
