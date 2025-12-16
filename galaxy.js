@@ -644,7 +644,7 @@ try {
                     const m = data.match(/FOUNDER\s+(\d+)/);
                     if (m && founderActions.length > 0) {
                         const act = founderActions[Math.floor(Math.random() * founderActions.length)];
-                        setTimeout(() => window.__send(`ACTION ${act} ${m[1]}\r\n`), 10000);
+                        //setTimeout(() => window.__send(`ACTION ${act} ${m[1]}\r\n`), 10000);
                     }
                 }
 
@@ -714,12 +714,12 @@ try {
                                             //window.__send(typingMsg);
                                             //console.log(`⌨️ Sending typing... (${count + 1}/${typingTimes})`);
                                             count++;
-                                        }, 1000);
+                                        }, 500);
                                     });
 
-                                }, 1000); // Delay sebelum kirim ke AI
+                                }, 500); // Delay sebelum kirim ke AI
 
-                            }, 1000); // <— BUFFER 20 DETIK
+                            }, 500); // <— BUFFER 20 DETIK
                         }
                     }
                 }
