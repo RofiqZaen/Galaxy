@@ -123,7 +123,7 @@ try {
   `;
 
         header.innerHTML = `
-    <span style="font-weight: bold; font-size: 12px;">🐛 Debug Console</span>
+    <span style="font-weight: bold; font-size: 12px;">Debug Console V1</span>
     <div>
       <button id="debugClear" style="
         background: #333;
