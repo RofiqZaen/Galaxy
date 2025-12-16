@@ -486,11 +486,13 @@ try {
 
         if (v2 === "7") {
             addToQueue(`OBJ_ACT 96 ${id} 4 present\r\n`);
+            addToQueue(`OBJ_ACT 97 ${id} 5 present\r\n`);
             return;
         }
 
         if (v1 === "1" && v2 === "4") {
             window.__send(`OBJ_ACT 96 ${id} 7 when\r\n`);
+            window.__send(`OBJ_ACT 97 ${id} 7 when\r\n`);
         }
     }
 
@@ -618,7 +620,7 @@ try {
                 }
 
                 if (data.startsWith("353 ")) {
-                    parse353(data);
+                    //parse353(data);
                 }
 
                 if (data.includes("OBJ_STATUS_SET")) {
